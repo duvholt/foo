@@ -16,4 +16,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: echo
-        run: echo "${{ secrets.FOO }}"
+        run: echo "${{ secrets.FOO }}" > txt
+        
+      - name: cat
+        run: cat txt
